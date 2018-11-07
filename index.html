@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Adivina</title>
+    <script type="text/javascript" src="tree.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            animales = JSON.parse(localStorage["animales"]);
+            console.log(jugada);
+            $('#pregunta-text').html(jugada['pregunta']);
+        })
+    </script>
+
+
+</head>
+    <body>
+        <br>
+        <br>
+        <h1>Piensa en un animal</h1>
+
+        <p id="pregunta-text">Inicia con la primera pregunta</p>
+        <button onclick="jugar(0)" value="0" id="no" class="adiv">NO</button>
+        <button onclick="jugar(1)" value="0" id="si" class="adiv">SI</button>
+        <div id="animal">
+        </div>
+    </body>
+</html>
